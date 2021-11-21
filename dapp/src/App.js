@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Web3ReactProvider } from '@web3-react/core';
+import { ethers } from 'ethers';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Details from './pages/Details';
+import Header from './components/Header';
+import { AppContextProvider } from './AppContext';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './styles/App.css';
+
+function getLibrary(provider) {
+  return new ethers.providers.Web3Provider(provider);
 }
+
+const App = () => {
+  if (window.ethereum) {
+    window.ethereum.on('networkChanged', () => window.location.reload());
+  }
+
+  return (
+    <AppContextProvider>
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <div>
+          <Header />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/details" component={Details} />
+        </div>
+      </Web3ReactProvider>
+    </AppContextProvider>
+  );
+};
 
 export default App;
