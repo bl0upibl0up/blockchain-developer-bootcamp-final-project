@@ -4,6 +4,5 @@ const FestivalMarketPlace = artifacts.require("FestivalMarketPlace");
 
 module.exports = async function(deployer){
     await deployer.deploy(FestivalMarketToken);
-    
     await deployer.deploy(FestivalMarketPlace);
 }
