@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useWeb3React } from '@web3-react/core';
 import Text from '../../components/Text';
-import Listings from '../../components/Listings';
 import { useFestivalMarketToken } from '../../hooks/useFestivalMarketToken';
 import { colors } from '../../theme';
 
@@ -32,7 +31,6 @@ const Home = () => {
         Rent an apartment with just ETH.
       </Text>
       {!active && <NotActive />}
-      {rentalsAddress && <Listings rentalsAddress={rentalsAddress} />}
     </Container>
   );
 };
