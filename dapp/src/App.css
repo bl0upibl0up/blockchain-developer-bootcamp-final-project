@@ -37,3 +37,11 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New';
+  background-color: black;
+  color: white;
+}
