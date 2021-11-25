@@ -43,7 +43,7 @@ const MetamaskConnectButton = () => {
   }, []);
 
   if (status === pageState.LOADING) {
-    return <Text>Loading..</Text>;
+    return <Text>Loading...</Text>;
   }
 
   if (status === pageState.READY && !active) {
@@ -51,7 +51,7 @@ const MetamaskConnectButton = () => {
       <ConnectBtn
         onClick={() => {
           if (!window.ethereum) {
-            setContentError("Looks like you don't have Metamask, you'll need it to use this app.");
+            setContentError("Metamask is not installed");
             return;
           }
           activate(injected, (e) => {
@@ -68,7 +68,7 @@ const MetamaskConnectButton = () => {
 
   return (
     <StyledHeaderBox>
-      <Text uppercase color="green">
+      <Text uppercase color="blue">
         {shortenAddress(account)}
       </Text>
       <ConnectBtn onClick={() => onLogOut(deactivate, () => history.push('/'))}>Log Out</ConnectBtn>

@@ -69,7 +69,7 @@ module.exports = {
       confirmations: 0, // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 1000, // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
-      from: "0x23EdD557157f9A38d3D102357b28bE5b75A4b2e3",
+      from: "0x003e6F13176F059c0Cfc339827aa25d6b405F1b5",
     },
     // Useful for private networks
     // private: {
