@@ -7,7 +7,7 @@ import { colors } from '../../theme';
 
 const Home = () => {
   const { active } = useWeb3React();
-  const { rentalsAddress } = useFestivalMarketToken();
+  const { festivalMarketTokenAddress } = useFestivalMarketToken();
 
   const NotActive = () => {
     return (
