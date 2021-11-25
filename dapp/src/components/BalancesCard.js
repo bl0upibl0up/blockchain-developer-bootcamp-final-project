@@ -21,7 +21,7 @@ const BalanceCard = () => {
 
   return (
     <StyledHeaderBox>
-      <Text block color={colors.blue}>
+      <Text block color={colors.darkBlue}>
         ETH balance: {ethBalance}
       </Text>
     </StyledHeaderBox>

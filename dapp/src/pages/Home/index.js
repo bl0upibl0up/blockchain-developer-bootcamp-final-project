@@ -8,6 +8,7 @@ import { colors } from '../../theme';
 const Home = () => {
   const { active } = useWeb3React();
   const { festivalMarketTokenAddress } = useFestivalMarketToken();
+  console.log(festivalMarketTokenAddress);
 
   const NotActive = () => {
     return (
@@ -28,7 +29,7 @@ const Home = () => {
   return (
     <Container className="mt-5 d-flex flex-column justify-content-center align-items-center">
       <Text center t1 style={{ marginBottom: '20px' }}>
-        Rent an apartment with just ETH.
+        Create your Festival tickets as NFT
       </Text>
       {!active && <NotActive />}
     </Container>

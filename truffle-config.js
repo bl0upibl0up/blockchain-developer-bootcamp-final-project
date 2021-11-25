@@ -58,18 +58,18 @@ module.exports = {
     // },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
-    ropsten: {
+    rinkeby: {
       provider: () =>
         new HDWalletProvider(
           mnemonic,
-          `https://ropsten.infura.io/v3/${process.env.ROPSTEN_INFURA_PROJECT_ID}`
+          `https://rinkeby.infura.io/v3/${process.env.ROPSTEN_INFURA_PROJECT_ID}`
         ),
-      network_id: 3, // Ropsten's id
+      network_id: 4, // Ropsten's id
       gas: 8000000, // Ropsten has a lower block limit than mainnet
       confirmations: 0, // # of confs to wait between deployments. (default: 0)
-      timeoutBlocks: 1000, // # of blocks before a deployment times out  (minimum/default: 50)
+      timeoutBlocks: 100000, // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
-      from: "0x003e6F13176F059c0Cfc339827aa25d6b405F1b5",
+      from: "0x9e098887Bc05AB4061f7860B30b73d8F5dac49FB",
     },
     // Useful for private networks
     // private: {
@@ -87,7 +87,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.4",
+      version: "0.8.0",
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
        settings: {          // See the solidity docs for advice about optimization and evmVersion
         optimizer: {

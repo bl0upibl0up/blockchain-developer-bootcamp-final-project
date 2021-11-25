@@ -9,9 +9,9 @@ import { shortenAddress } from '../utils/shortenAddress';
 import { useAppContext } from '../AppContext';
 
 const ConnectBtn = styled.button`
-  border: 1px solid white;
+  border: 1px solid blue;
   background: transparent;
-  color: white;
+  color: blue;
   border-radius: 5px;
   margin-left: 10px;
 `;
