@@ -48,8 +48,8 @@ contract TransactionsLogic{
         _IFestivalMarketToken.transferFrom(msg.sender,
                                            _IFestivalTicket.ownerOf(ticketId),
                                            (ticketPrice - organiserCommission));
-                                           _IFestivalMarketToken.transferFrom(msg.sender, _organiser, organiserCommission);
-                                           _IFestivalTicket.secondaryPurchaseTransfer(msg.sender, ticketId);
+        _IFestivalMarketToken.transferFrom(msg.sender, _organiser, organiserCommission);
+        _IFestivalTicket.secondaryPurchaseTransfer(msg.sender, ticketId);
             emit TicketPurchased();
     }
 

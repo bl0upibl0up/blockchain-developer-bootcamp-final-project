@@ -45,7 +45,7 @@ contract FestivalTicket is Context, AccessControl, ERC721{
 
     function batchMint(uint256 numberOfTickets, address operator) public virtual{
         require(hasRole(ORGANISER_ROLE, _msgSender()), 'Not the organiser');
-        require(_ticketId.current() + numberOfTickets <= 1000, "Cannot mint more than 1000 tickets");
+        require(_ticketId.current() + numberOfTickets <= _totalSupply, "Cannot mint more than total supply");
         for(uint256 i = 0; i < numberOfTickets; i++){
             uint256 currentTicketId = _ticketId.current();
             _mint(operator, currentTicketId);
