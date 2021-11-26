@@ -18,12 +18,12 @@ module.exports = {
           mnemonic,
           `https://rinkeby.infura.io/v3/${process.env.RINKEBY_INFURA_PROJECT_ID}`
         ),
-      network_id: 4, // Ropsten's id
-      gas: 8000000, // Ropsten has a lower block limit than mainnet
-      confirmations: 0, // # of confs to wait between deployments. (default: 0)
-      timeoutBlocks: 100000, // # of blocks before a deployment times out  (minimum/default: 50)
-      skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
-      from: "0x3967c793618Cd6Db52123f3fA5b6203C2b554BEC",
+      network_id: 4, 
+      gas: 8000000,
+      confirmations: 0,
+      timeoutBlocks: 100000,
+      skipDryRun: true,
+      from: "0x08429eB7AcB6EaeA59127422DCb1c74A62C7Ee38",
     },
   },
 
