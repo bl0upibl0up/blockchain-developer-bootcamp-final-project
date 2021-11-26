@@ -20,7 +20,7 @@ contract FestivalMarketPlace is Ownable{
     }
 
     mapping(string => bool) private festivalExists;
-    FestivalDetails[] private listOfFestivals;
+    FestivalDetails[] public listOfFestivals;
 
     event FestivalCreated(string festivalName, address transactionsLogicAddress);
 

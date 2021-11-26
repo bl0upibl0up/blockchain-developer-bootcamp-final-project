@@ -6,7 +6,7 @@ export const StyledHeaderBox = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 1%;
-  border: 1px solid ${colors.darkBlue};
+  border: 1px solid ${colors.white};
   padding: 10px;
   border-radius: 5px;
   height: 50px;

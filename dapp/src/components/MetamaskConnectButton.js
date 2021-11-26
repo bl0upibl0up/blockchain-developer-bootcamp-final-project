@@ -11,7 +11,8 @@ import { useAppContext } from '../AppContext';
 const ConnectBtn = styled.button`
   border: 1px solid blue;
   background: transparent;
-  color: blue;
+  color: white;
+  border-color: white;
   border-radius: 5px;
   margin-left: 10px;
 `;
@@ -68,7 +69,7 @@ const MetamaskConnectButton = () => {
 
   return (
     <StyledHeaderBox>
-      <Text uppercase color="blue">
+      <Text uppercase color="white">
         {shortenAddress(account)}
       </Text>
       <ConnectBtn onClick={() => onLogOut(deactivate, () => history.push('/'))}>Log Out</ConnectBtn>
