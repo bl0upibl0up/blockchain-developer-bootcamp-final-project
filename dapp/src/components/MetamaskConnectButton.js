@@ -9,7 +9,7 @@ import { shortenAddress } from '../utils/shortenAddress';
 import { useAppContext } from '../AppContext';
 
 const ConnectBtn = styled.button`
-  border: 1px solid blue;
+  border: 1px solid white;
   background: transparent;
   color: white;
   border-color: white;
@@ -57,7 +57,7 @@ const MetamaskConnectButton = () => {
           }
           activate(injected, (e) => {
             if (e instanceof UnsupportedChainIdError) {
-              setContentError('Only Ropsten supported.');
+              setContentError('Only Rinkeby supported.');
             }
           });
         }}

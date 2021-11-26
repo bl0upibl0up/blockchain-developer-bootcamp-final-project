@@ -63,7 +63,7 @@ contract FestivalTicket is Context, AccessControl, ERC721{
     //Transfer the NFT with ticketId to the buyer and add it to the list of buyers and to the mapping of tickets owned by addresses
     function primaryPurchaseTransfer(address buyer, uint256 ticketId) public{
         require(ownerOf(ticketId) == msg.sender, 'Trying to transfer from the wrong account');
-        require(buyer != _festivalOrganiser, 'The organiser cannot buy on the secondary market');
+        require(buyer != _festivalOrganiser, 'The organiser cannot buy tickets');
         transferFrom(ownerOf(ticketId), buyer, ticketId);
         bool existingBuyer = false;
         for(uint256 i = 0; i < ticketBuyers.length; i++){
