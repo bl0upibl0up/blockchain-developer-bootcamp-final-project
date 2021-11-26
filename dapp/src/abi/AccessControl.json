@@ -206,7 +206,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Contract module that allows children to implement role-based access control mechanisms. This is a lightweight version that doesn't allow enumerating role members except through off-chain means by accessing the contract event logs. Some applications may benefit from on-chain enumerability, for those cases see {AccessControlEnumerable}. Roles are referred to by their `bytes32` identifier. These should be exposed in the external API and be unique. The best way to achieve this is by using `public constant` hash digests: ``` bytes32 public constant MY_ROLE = keccak256(\\\"MY_ROLE\\\"); ``` Roles can be used to represent a set of permissions. To restrict access to a function call, use {hasRole}: ``` function foo() public {     require(hasRole(MY_ROLE, msg.sender));     ... } ``` Roles can be granted and revoked dynamically via the {grantRole} and {revokeRole} functions. Each role has an associated admin role, and only accounts that have a role's admin role can call {grantRole} and {revokeRole}. By default, the admin role for all roles is `DEFAULT_ADMIN_ROLE`, which means that only accounts with this role will be able to grant or revoke other roles. More complex role relationships can be created by using {_setRoleAdmin}. WARNING: The `DEFAULT_ADMIN_ROLE` is also its own admin: it has permission to grant and revoke this role. Extra precautions should be taken to secure accounts that have been granted it.\",\"kind\":\"dev\",\"methods\":{\"getRoleAdmin(bytes32)\":{\"details\":\"Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}.\"},\"grantRole(bytes32,address)\":{\"details\":\"Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role.\"},\"hasRole(bytes32,address)\":{\"details\":\"Returns `true` if `account` has been granted `role`.\"},\"renounceRole(bytes32,address)\":{\"details\":\"Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`.\"},\"revokeRole(bytes32,address)\":{\"details\":\"Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role.\"},\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/access/AccessControl.sol\":\"AccessControl\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/AccessControl.sol\":{\"keccak256\":\"0x183481af1c40d2efb26b86f63d6fe9e22f24c87e436d60a69f261b38500e7cd6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f562746c399ae045994a88b2218d1238a349de07afbfb305aab0c7fdbc2954cc\",\"dweb:/ipfs/QmYoFrDD2c6fi9CpPz1bjCMAyketjZ3G7ByUSVQMntysms\"]},\"@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0xfe0edb09653ed10e8a1bfe03eb9b0ff06775666eee817a95bd3d0799f1ee2b44\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fbb9d503857eab98f87465df0f02fef03083f30c1dbec82f319f41aaadae19b4\",\"dweb:/ipfs/QmTxDshRAMtoeM45YrTzQZdpmy4mt4scCNHjfZiWSvdETF\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x90565a39ae45c80f0468dc96c7b20d0afc3055f344c8203a0c9258239f350b9f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://26e8b38a7ac8e7b4463af00cf7fff1bf48ae9875765bf4f7751e100124d0bc8c\",\"dweb:/ipfs/QmWcsmkVr24xmmjfnBQZoemFniXjj3vwT78Cz6uqZW1Hux\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x391d3ba97ab6856a16b225d6ee29617ad15ff00db70f3b4df1ab5ea33aa47c9d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d636ba90bbbeed04a1ea7fe9ec2466757e30fd38ba2ca173636dbf69a518735e\",\"dweb:/ipfs/QmQwCB2BHnEuYR22PYt9HkpbgeFDhq4rHmaYqAZbX3WRC7\"]},\"@openzeppelin/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0x5718c5df9bd67ac68a796961df938821bb5dc0cd4c6118d77e9145afb187409b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d10e1d9b26042424789246603906ad06143bf9a928f4e99de8b5e3bdc662f549\",\"dweb:/ipfs/Qmejonoaj5MLekPus229rJQHcC6E9dz2xorjHJR84fMfmn\"]},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0xa28007762d9da9db878dd421960c8cb9a10471f47ab5c1b3309bfe48e9e79ff4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://796ab6e88af7bf0e78def0f059310c903af6a312b565344e0ff524a0f26e81c6\",\"dweb:/ipfs/QmcsVgLgzWdor3UnAztUkXKNGcysm1MPneWksF72AvnwBx\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Contract module that allows children to implement role-based access control mechanisms. This is a lightweight version that doesn't allow enumerating role members except through off-chain means by accessing the contract event logs. Some applications may benefit from on-chain enumerability, for those cases see {AccessControlEnumerable}. Roles are referred to by their `bytes32` identifier. These should be exposed in the external API and be unique. The best way to achieve this is by using `public constant` hash digests: ``` bytes32 public constant MY_ROLE = keccak256(\\\"MY_ROLE\\\"); ``` Roles can be used to represent a set of permissions. To restrict access to a function call, use {hasRole}: ``` function foo() public {     require(hasRole(MY_ROLE, msg.sender));     ... } ``` Roles can be granted and revoked dynamically via the {grantRole} and {revokeRole} functions. Each role has an associated admin role, and only accounts that have a role's admin role can call {grantRole} and {revokeRole}. By default, the admin role for all roles is `DEFAULT_ADMIN_ROLE`, which means that only accounts with this role will be able to grant or revoke other roles. More complex role relationships can be created by using {_setRoleAdmin}. WARNING: The `DEFAULT_ADMIN_ROLE` is also its own admin: it has permission to grant and revoke this role. Extra precautions should be taken to secure accounts that have been granted it.\",\"kind\":\"dev\",\"methods\":{\"getRoleAdmin(bytes32)\":{\"details\":\"Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}.\"},\"grantRole(bytes32,address)\":{\"details\":\"Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role.\"},\"hasRole(bytes32,address)\":{\"details\":\"Returns `true` if `account` has been granted `role`.\"},\"renounceRole(bytes32,address)\":{\"details\":\"Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`.\"},\"revokeRole(bytes32,address)\":{\"details\":\"Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role.\"},\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/access/AccessControl.sol\":\"AccessControl\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/AccessControl.sol\":{\"keccak256\":\"0x183481af1c40d2efb26b86f63d6fe9e22f24c87e436d60a69f261b38500e7cd6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f562746c399ae045994a88b2218d1238a349de07afbfb305aab0c7fdbc2954cc\",\"dweb:/ipfs/QmYoFrDD2c6fi9CpPz1bjCMAyketjZ3G7ByUSVQMntysms\"]},\"@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0xfe0edb09653ed10e8a1bfe03eb9b0ff06775666eee817a95bd3d0799f1ee2b44\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fbb9d503857eab98f87465df0f02fef03083f30c1dbec82f319f41aaadae19b4\",\"dweb:/ipfs/QmTxDshRAMtoeM45YrTzQZdpmy4mt4scCNHjfZiWSvdETF\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x90565a39ae45c80f0468dc96c7b20d0afc3055f344c8203a0c9258239f350b9f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://26e8b38a7ac8e7b4463af00cf7fff1bf48ae9875765bf4f7751e100124d0bc8c\",\"dweb:/ipfs/QmWcsmkVr24xmmjfnBQZoemFniXjj3vwT78Cz6uqZW1Hux\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x391d3ba97ab6856a16b225d6ee29617ad15ff00db70f3b4df1ab5ea33aa47c9d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d636ba90bbbeed04a1ea7fe9ec2466757e30fd38ba2ca173636dbf69a518735e\",\"dweb:/ipfs/QmQwCB2BHnEuYR22PYt9HkpbgeFDhq4rHmaYqAZbX3WRC7\"]},\"@openzeppelin/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0x5718c5df9bd67ac68a796961df938821bb5dc0cd4c6118d77e9145afb187409b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d10e1d9b26042424789246603906ad06143bf9a928f4e99de8b5e3bdc662f549\",\"dweb:/ipfs/Qmejonoaj5MLekPus229rJQHcC6E9dz2xorjHJR84fMfmn\"]},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0xa28007762d9da9db878dd421960c8cb9a10471f47ab5c1b3309bfe48e9e79ff4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://796ab6e88af7bf0e78def0f059310c903af6a312b565344e0ff524a0f26e81c6\",\"dweb:/ipfs/QmcsVgLgzWdor3UnAztUkXKNGcysm1MPneWksF72AvnwBx\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -257,7 +257,6 @@
         "absolutePath": "@openzeppelin/contracts/access/IAccessControl.sol",
         "file": "./IAccessControl.sol",
         "id": 2,
-        "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 307,
         "sourceUnit": 380,
@@ -269,7 +268,6 @@
         "absolutePath": "@openzeppelin/contracts/utils/Context.sol",
         "file": "../utils/Context.sol",
         "id": 3,
-        "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 307,
         "sourceUnit": 2429,
@@ -281,7 +279,6 @@
         "absolutePath": "@openzeppelin/contracts/utils/Strings.sol",
         "file": "../utils/Strings.sol",
         "id": 4,
-        "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 307,
         "sourceUnit": 2706,
@@ -293,7 +290,6 @@
         "absolutePath": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
         "file": "../utils/introspection/ERC165.sol",
         "id": 5,
-        "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 307,
         "sourceUnit": 2730,
@@ -341,7 +337,12 @@
             "src": "1791:6:0"
           }
         ],
-        "contractDependencies": [],
+        "contractDependencies": [
+          379,
+          2428,
+          2729,
+          2741
+        ],
         "contractKind": "contract",
         "documentation": {
           "id": 6,
@@ -359,7 +360,6 @@
           2428
         ],
         "name": "AccessControl",
-        "nameLocation": "1749:13:0",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -371,7 +371,6 @@
                 "id": 16,
                 "mutability": "mutable",
                 "name": "members",
-                "nameLocation": "1855:7:0",
                 "nodeType": "VariableDeclaration",
                 "scope": 19,
                 "src": "1830:32:0",
@@ -417,7 +416,6 @@
                 "id": 18,
                 "mutability": "mutable",
                 "name": "adminRole",
-                "nameLocation": "1880:9:0",
                 "nodeType": "VariableDeclaration",
                 "scope": 19,
                 "src": "1872:17:0",
@@ -441,7 +439,6 @@
               }
             ],
             "name": "RoleData",
-            "nameLocation": "1811:8:0",
             "nodeType": "StructDefinition",
             "scope": 306,
             "src": "1804:92:0",
@@ -452,7 +449,6 @@
             "id": 24,
             "mutability": "mutable",
             "name": "_roles",
-            "nameLocation": "1939:6:0",
             "nodeType": "VariableDeclaration",
             "scope": 306,
             "src": "1902:43:0",
@@ -506,7 +502,6 @@
             "id": 27,
             "mutability": "constant",
             "name": "DEFAULT_ADMIN_ROLE",
-            "nameLocation": "1976:18:0",
             "nodeType": "VariableDeclaration",
             "scope": 306,
             "src": "1952:49:0",
@@ -652,7 +647,6 @@
             },
             "id": 40,
             "name": "onlyRole",
-            "nameLocation": "2397:8:0",
             "nodeType": "ModifierDefinition",
             "parameters": {
               "id": 31,
@@ -663,7 +657,6 @@
                   "id": 30,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "2414:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 40,
                   "src": "2406:12:0",
@@ -894,7 +887,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "supportsInterface",
-            "nameLocation": "2554:17:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 45,
@@ -911,7 +903,6 @@
                   "id": 43,
                   "mutability": "mutable",
                   "name": "interfaceId",
-                  "nameLocation": "2579:11:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 62,
                   "src": "2572:18:0",
@@ -945,7 +936,6 @@
                   "id": 47,
                   "mutability": "mutable",
                   "name": "",
-                  "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
                   "scope": 62,
                   "src": "2630:4:0",
@@ -1082,7 +1072,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "hasRole",
-            "nameLocation": "2843:7:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 69,
@@ -1099,7 +1088,6 @@
                   "id": 65,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "2859:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 81,
                   "src": "2851:12:0",
@@ -1126,7 +1114,6 @@
                   "id": 67,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "2873:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 81,
                   "src": "2865:15:0",
@@ -1161,7 +1148,6 @@
                   "id": 71,
                   "mutability": "mutable",
                   "name": "",
-                  "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
                   "scope": 81,
                   "src": "2912:4:0",
@@ -1738,7 +1724,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "_checkRole",
-            "nameLocation": "3261:10:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 87,
@@ -1749,7 +1734,6 @@
                   "id": 84,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "3280:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 124,
                   "src": "3272:12:0",
@@ -1776,7 +1760,6 @@
                   "id": 86,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "3294:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 124,
                   "src": "3286:15:0",
@@ -1895,7 +1878,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "getRoleAdmin",
-            "nameLocation": "3926:12:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 129,
@@ -1912,7 +1894,6 @@
                   "id": 127,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "3947:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 139,
                   "src": "3939:12:0",
@@ -1946,7 +1927,6 @@
                   "id": 131,
                   "mutability": "mutable",
                   "name": "",
-                  "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
                   "scope": 139,
                   "src": "3983:7:0",
@@ -2120,7 +2100,6 @@
                   }
                 ],
                 "id": 151,
-                "kind": "modifierInvocation",
                 "modifierName": {
                   "id": 147,
                   "name": "onlyRole",
@@ -2133,7 +2112,6 @@
               }
             ],
             "name": "grantRole",
-            "nameLocation": "4297:9:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 146,
@@ -2150,7 +2128,6 @@
                   "id": 142,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "4315:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 159,
                   "src": "4307:12:0",
@@ -2177,7 +2154,6 @@
                   "id": 144,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "4329:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 159,
                   "src": "4321:15:0",
@@ -2358,7 +2334,6 @@
                   }
                 ],
                 "id": 171,
-                "kind": "modifierInvocation",
                 "modifierName": {
                   "id": 167,
                   "name": "onlyRole",
@@ -2371,7 +2346,6 @@
               }
             ],
             "name": "revokeRole",
-            "nameLocation": "4676:10:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 166,
@@ -2388,7 +2362,6 @@
                   "id": 162,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "4695:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 179,
                   "src": "4687:12:0",
@@ -2415,7 +2388,6 @@
                   "id": 164,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "4709:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 179,
                   "src": "4701:15:0",
@@ -2669,7 +2641,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "renounceRole",
-            "nameLocation": "5314:12:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 186,
@@ -2686,7 +2657,6 @@
                   "id": 182,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "5335:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 202,
                   "src": "5327:12:0",
@@ -2713,7 +2683,6 @@
                   "id": 184,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "5349:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 202,
                   "src": "5341:15:0",
@@ -2839,7 +2808,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "_setupRole",
-            "nameLocation": "6093:10:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 208,
@@ -2850,7 +2818,6 @@
                   "id": 205,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "6112:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 216,
                   "src": "6104:12:0",
@@ -2877,7 +2844,6 @@
                   "id": 207,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "6126:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 216,
                   "src": "6118:15:0",
@@ -2931,7 +2897,6 @@
                       "id": 225,
                       "mutability": "mutable",
                       "name": "previousAdminRole",
-                      "nameLocation": "6410:17:0",
                       "nodeType": "VariableDeclaration",
                       "scope": 243,
                       "src": "6402:25:0",
@@ -3187,7 +3152,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "_setRoleAdmin",
-            "nameLocation": "6328:13:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 222,
@@ -3198,7 +3162,6 @@
                   "id": 219,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "6350:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 244,
                   "src": "6342:12:0",
@@ -3225,7 +3188,6 @@
                   "id": 221,
                   "mutability": "mutable",
                   "name": "adminRole",
-                  "nameLocation": "6364:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 244,
                   "src": "6356:17:0",
@@ -3581,7 +3543,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "_grantRole",
-            "nameLocation": "6581:10:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 249,
@@ -3592,7 +3553,6 @@
                   "id": 246,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "6600:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 275,
                   "src": "6592:12:0",
@@ -3619,7 +3579,6 @@
                   "id": 248,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "6614:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 275,
                   "src": "6606:15:0",
@@ -3961,7 +3920,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "_revokeRole",
-            "nameLocation": "6811:11:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 280,
@@ -3972,7 +3930,6 @@
                   "id": 277,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "6831:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 305,
                   "src": "6823:12:0",
@@ -3999,7 +3956,6 @@
                   "id": 279,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "6845:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 305,
                   "src": "6837:15:0",
@@ -4039,8 +3995,7 @@
           }
         ],
         "scope": 307,
-        "src": "1731:5298:0",
-        "usedErrors": []
+        "src": "1731:5298:0"
       }
     ],
     "src": "33:6997:0"
@@ -4086,7 +4041,6 @@
         "absolutePath": "@openzeppelin/contracts/access/IAccessControl.sol",
         "file": "./IAccessControl.sol",
         "id": 2,
-        "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 307,
         "sourceUnit": 380,
@@ -4098,7 +4052,6 @@
         "absolutePath": "@openzeppelin/contracts/utils/Context.sol",
         "file": "../utils/Context.sol",
         "id": 3,
-        "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 307,
         "sourceUnit": 2429,
@@ -4110,7 +4063,6 @@
         "absolutePath": "@openzeppelin/contracts/utils/Strings.sol",
         "file": "../utils/Strings.sol",
         "id": 4,
-        "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 307,
         "sourceUnit": 2706,
@@ -4122,7 +4074,6 @@
         "absolutePath": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
         "file": "../utils/introspection/ERC165.sol",
         "id": 5,
-        "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 307,
         "sourceUnit": 2730,
@@ -4170,7 +4121,12 @@
             "src": "1791:6:0"
           }
         ],
-        "contractDependencies": [],
+        "contractDependencies": [
+          379,
+          2428,
+          2729,
+          2741
+        ],
         "contractKind": "contract",
         "documentation": {
           "id": 6,
@@ -4188,7 +4144,6 @@
           2428
         ],
         "name": "AccessControl",
-        "nameLocation": "1749:13:0",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -4200,7 +4155,6 @@
                 "id": 16,
                 "mutability": "mutable",
                 "name": "members",
-                "nameLocation": "1855:7:0",
                 "nodeType": "VariableDeclaration",
                 "scope": 19,
                 "src": "1830:32:0",
@@ -4246,7 +4200,6 @@
                 "id": 18,
                 "mutability": "mutable",
                 "name": "adminRole",
-                "nameLocation": "1880:9:0",
                 "nodeType": "VariableDeclaration",
                 "scope": 19,
                 "src": "1872:17:0",
@@ -4270,7 +4223,6 @@
               }
             ],
             "name": "RoleData",
-            "nameLocation": "1811:8:0",
             "nodeType": "StructDefinition",
             "scope": 306,
             "src": "1804:92:0",
@@ -4281,7 +4233,6 @@
             "id": 24,
             "mutability": "mutable",
             "name": "_roles",
-            "nameLocation": "1939:6:0",
             "nodeType": "VariableDeclaration",
             "scope": 306,
             "src": "1902:43:0",
@@ -4335,7 +4286,6 @@
             "id": 27,
             "mutability": "constant",
             "name": "DEFAULT_ADMIN_ROLE",
-            "nameLocation": "1976:18:0",
             "nodeType": "VariableDeclaration",
             "scope": 306,
             "src": "1952:49:0",
@@ -4481,7 +4431,6 @@
             },
             "id": 40,
             "name": "onlyRole",
-            "nameLocation": "2397:8:0",
             "nodeType": "ModifierDefinition",
             "parameters": {
               "id": 31,
@@ -4492,7 +4441,6 @@
                   "id": 30,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "2414:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 40,
                   "src": "2406:12:0",
@@ -4723,7 +4671,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "supportsInterface",
-            "nameLocation": "2554:17:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 45,
@@ -4740,7 +4687,6 @@
                   "id": 43,
                   "mutability": "mutable",
                   "name": "interfaceId",
-                  "nameLocation": "2579:11:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 62,
                   "src": "2572:18:0",
@@ -4774,7 +4720,6 @@
                   "id": 47,
                   "mutability": "mutable",
                   "name": "",
-                  "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
                   "scope": 62,
                   "src": "2630:4:0",
@@ -4911,7 +4856,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "hasRole",
-            "nameLocation": "2843:7:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 69,
@@ -4928,7 +4872,6 @@
                   "id": 65,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "2859:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 81,
                   "src": "2851:12:0",
@@ -4955,7 +4898,6 @@
                   "id": 67,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "2873:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 81,
                   "src": "2865:15:0",
@@ -4990,7 +4932,6 @@
                   "id": 71,
                   "mutability": "mutable",
                   "name": "",
-                  "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
                   "scope": 81,
                   "src": "2912:4:0",
@@ -5567,7 +5508,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "_checkRole",
-            "nameLocation": "3261:10:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 87,
@@ -5578,7 +5518,6 @@
                   "id": 84,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "3280:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 124,
                   "src": "3272:12:0",
@@ -5605,7 +5544,6 @@
                   "id": 86,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "3294:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 124,
                   "src": "3286:15:0",
@@ -5724,7 +5662,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "getRoleAdmin",
-            "nameLocation": "3926:12:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 129,
@@ -5741,7 +5678,6 @@
                   "id": 127,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "3947:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 139,
                   "src": "3939:12:0",
@@ -5775,7 +5711,6 @@
                   "id": 131,
                   "mutability": "mutable",
                   "name": "",
-                  "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
                   "scope": 139,
                   "src": "3983:7:0",
@@ -5949,7 +5884,6 @@
                   }
                 ],
                 "id": 151,
-                "kind": "modifierInvocation",
                 "modifierName": {
                   "id": 147,
                   "name": "onlyRole",
@@ -5962,7 +5896,6 @@
               }
             ],
             "name": "grantRole",
-            "nameLocation": "4297:9:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 146,
@@ -5979,7 +5912,6 @@
                   "id": 142,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "4315:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 159,
                   "src": "4307:12:0",
@@ -6006,7 +5938,6 @@
                   "id": 144,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "4329:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 159,
                   "src": "4321:15:0",
@@ -6187,7 +6118,6 @@
                   }
                 ],
                 "id": 171,
-                "kind": "modifierInvocation",
                 "modifierName": {
                   "id": 167,
                   "name": "onlyRole",
@@ -6200,7 +6130,6 @@
               }
             ],
             "name": "revokeRole",
-            "nameLocation": "4676:10:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 166,
@@ -6217,7 +6146,6 @@
                   "id": 162,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "4695:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 179,
                   "src": "4687:12:0",
@@ -6244,7 +6172,6 @@
                   "id": 164,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "4709:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 179,
                   "src": "4701:15:0",
@@ -6498,7 +6425,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "renounceRole",
-            "nameLocation": "5314:12:0",
             "nodeType": "FunctionDefinition",
             "overrides": {
               "id": 186,
@@ -6515,7 +6441,6 @@
                   "id": 182,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "5335:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 202,
                   "src": "5327:12:0",
@@ -6542,7 +6467,6 @@
                   "id": 184,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "5349:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 202,
                   "src": "5341:15:0",
@@ -6668,7 +6592,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "_setupRole",
-            "nameLocation": "6093:10:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 208,
@@ -6679,7 +6602,6 @@
                   "id": 205,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "6112:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 216,
                   "src": "6104:12:0",
@@ -6706,7 +6628,6 @@
                   "id": 207,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "6126:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 216,
                   "src": "6118:15:0",
@@ -6760,7 +6681,6 @@
                       "id": 225,
                       "mutability": "mutable",
                       "name": "previousAdminRole",
-                      "nameLocation": "6410:17:0",
                       "nodeType": "VariableDeclaration",
                       "scope": 243,
                       "src": "6402:25:0",
@@ -7016,7 +6936,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "_setRoleAdmin",
-            "nameLocation": "6328:13:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 222,
@@ -7027,7 +6946,6 @@
                   "id": 219,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "6350:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 244,
                   "src": "6342:12:0",
@@ -7054,7 +6972,6 @@
                   "id": 221,
                   "mutability": "mutable",
                   "name": "adminRole",
-                  "nameLocation": "6364:9:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 244,
                   "src": "6356:17:0",
@@ -7410,7 +7327,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "_grantRole",
-            "nameLocation": "6581:10:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 249,
@@ -7421,7 +7337,6 @@
                   "id": 246,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "6600:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 275,
                   "src": "6592:12:0",
@@ -7448,7 +7363,6 @@
                   "id": 248,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "6614:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 275,
                   "src": "6606:15:0",
@@ -7790,7 +7704,6 @@
             "kind": "function",
             "modifiers": [],
             "name": "_revokeRole",
-            "nameLocation": "6811:11:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 280,
@@ -7801,7 +7714,6 @@
                   "id": 277,
                   "mutability": "mutable",
                   "name": "role",
-                  "nameLocation": "6831:4:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 305,
                   "src": "6823:12:0",
@@ -7828,7 +7740,6 @@
                   "id": 279,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "6845:7:0",
                   "nodeType": "VariableDeclaration",
                   "scope": 305,
                   "src": "6837:15:0",
@@ -7868,19 +7779,18 @@
           }
         ],
         "scope": 307,
-        "src": "1731:5298:0",
-        "usedErrors": []
+        "src": "1731:5298:0"
       }
     ],
     "src": "33:6997:0"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-11-25T19:44:19.470Z",
+  "updatedAt": "2021-11-26T14:38:40.643Z",
   "devdoc": {
     "details": "Contract module that allows children to implement role-based access control mechanisms. This is a lightweight version that doesn't allow enumerating role members except through off-chain means by accessing the contract event logs. Some applications may benefit from on-chain enumerability, for those cases see {AccessControlEnumerable}. Roles are referred to by their `bytes32` identifier. These should be exposed in the external API and be unique. The best way to achieve this is by using `public constant` hash digests: ``` bytes32 public constant MY_ROLE = keccak256(\"MY_ROLE\"); ``` Roles can be used to represent a set of permissions. To restrict access to a function call, use {hasRole}: ``` function foo() public {     require(hasRole(MY_ROLE, msg.sender));     ... } ``` Roles can be granted and revoked dynamically via the {grantRole} and {revokeRole} functions. Each role has an associated admin role, and only accounts that have a role's admin role can call {grantRole} and {revokeRole}. By default, the admin role for all roles is `DEFAULT_ADMIN_ROLE`, which means that only accounts with this role will be able to grant or revoke other roles. More complex role relationships can be created by using {_setRoleAdmin}. WARNING: The `DEFAULT_ADMIN_ROLE` is also its own admin: it has permission to grant and revoke this role. Extra precautions should be taken to secure accounts that have been granted it.",
     "kind": "dev",
