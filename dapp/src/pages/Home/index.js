@@ -159,7 +159,7 @@
             for(var i = 0; i < festivalDetails.length; i++){
                 mintSelectBox.options.add(new Option(festivalDetails[i][0]));
                 organiserSelectBox.options.add(new Option(festivalDetails[i][0]));
-                organiserSelectBox.options.add(new Option(festivalDetails[i][0]));
+                secondarySellerSelectBox.options.add(new Option(festivalDetails[i][0]));
                 secondaryBuyerSelectBox.options.add(new Option(festivalDetails[i][0]));
                 ticketOwnersBox.options.add(new Option(festivalDetails[i][0]));
 
