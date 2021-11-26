@@ -5,29 +5,54 @@ import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Context.sol";
+
+/// @title A festival market place
+/// @author Ambroise Moreau
+/// @notice This contract is the ERC721 that is used to mint the festival tickets
+
 contract FestivalTicket is Context, AccessControl, ERC721{
     using Counters for Counters.Counter;
+    // @dev counter used to keep track of the id of the minted ticket
     Counters.Counter private _ticketId;
+    /// @dev bytes32 representing the organiser_role
     bytes32 public constant ORGANISER_ROLE=keccak256("ORGANISER_ROLE");
-    
+    /// @dev address of the festivalOrganiser
     address private _festivalOrganiser;
     
+    /// @dev Struct holding the ticketInfo
     struct TicketInfo{
+        //@dev last purchase price
         uint256 purchasedAt;
+        //@dev selling price
         uint256 sellingAt;
+        //@dev ticket is on sale on the secondary market
         bool forSale;
     }
+    /// @dev to check if the tickets have already been minted
     bool private _minted;
+    /// @dev initial price
     uint256 private _initTicketPrice;
+    /// @dev ticket supply
     uint256 private _totalSupply;
     
+    /// @dev mapping holding the ticketsInfo of all the tickets
     mapping(uint256 => TicketInfo) ticketsHistory;
-    //arrays and mapping used to easily get the state of the festival (supply, tickets on the secondary market, etc)
+    /// @dev array that holds the id of the tickets on sale on the secondary market
     uint256[] private ticketsOnSecondaryMarket;
+    /// @dev mapping to check which tickets are owned by one address
     mapping(address => uint256[]) ticketsOwnedByAddress;
+    /// @dev array of ticket buyers
     address[] private ticketBuyers;
+    /// @dev tickets that are under the control of the owner
     uint256[] private ticketsOwnedByOrganiser;
+    /// @notice event emitted when tickets have been minted
     event BatchMinted();
+    /// @dev ERC721 constructor
+    /// @param festivalName name of the festival
+    /// @param festivalSymbol symbol of the festival
+    /// @param totalSupply total supply of the tickets
+    /// @param initTicketPrice initial ticket price
+    /// @param festivalOrganiser address of the festival organiser
     constructor(string memory festivalName, string memory festivalSymbol,
                 uint256 totalSupply, uint256 initTicketPrice, address festivalOrganiser)
                 ERC721(festivalName, festivalSymbol){
@@ -36,14 +61,17 @@ contract FestivalTicket is Context, AccessControl, ERC721{
                     _initTicketPrice = initTicketPrice;
                     _festivalOrganiser = festivalOrganiser;
                 }
+    /// @notice check if ticket is on sale
+    /// @param ticketId id of the ticket
     modifier isOnSale(uint256 ticketId){
         require(ticketsHistory[ticketId].forSale, 'Ticket is not on sale');
         _;
     }
-    /*Minting in small batches as minting 1000 tickets at one uses more gas than what is allowed. 
-    The numberOfTickets should be a divider of 1000*/
-
+    /// @notice function that mints the ticket. They are minted to the address of the transactionsLogic smart contract linked to the festival
+    /// @param numberOfTickets The number of tickets minted in the batch
+    /// @param operator The address of the operator. The NFT are minted to this address.
     function batchMint(uint256 numberOfTickets, address operator) public virtual{
+        // ony the organiser can start the mint process
         require(hasRole(ORGANISER_ROLE, _msgSender()), 'Not the organiser');
         require(_ticketId.current() + numberOfTickets <= _totalSupply, "Cannot mint more than total supply");
         for(uint256 i = 0; i < numberOfTickets; i++){
@@ -60,12 +88,15 @@ contract FestivalTicket is Context, AccessControl, ERC721{
         _minted = true;
         emit BatchMinted();
     }
-    //Transfer the NFT with ticketId to the buyer and add it to the list of buyers and to the mapping of tickets owned by addresses
+    /// @notice transfer the NFT when it is bought on the primary market
+    /// @param buyer address of the customer buying the ticket
+    /// @param ticketId id of the ticket the customer wants to buy
     function primaryPurchaseTransfer(address buyer, uint256 ticketId) public{
         require(ownerOf(ticketId) == msg.sender, 'Trying to transfer from the wrong account');
         require(buyer != _festivalOrganiser, 'The organiser cannot buy tickets');
         transferFrom(ownerOf(ticketId), buyer, ticketId);
         bool existingBuyer = false;
+        // the remainder is just to track the ticket through the different users an provide an accurate history in the frontend 
         for(uint256 i = 0; i < ticketBuyers.length; i++){
             if(ticketBuyers[i] == buyer){
                 existingBuyer = true;
@@ -90,13 +121,15 @@ contract FestivalTicket is Context, AccessControl, ERC721{
             }
         }
     }
-    //Transfer the NFT from the seller to the buyer and update the list of buyers and the mapping of tickets owned by addresses
+    /// @notice transfer the NFT when it is bought on the secondary market
+    /// @param ticketId id of the ticket the customer wants to buy
     function secondaryPurchaseTransfer(address buyer, uint256 ticketId) public{
         require(ownerOf(ticketId) != _festivalOrganiser, "The organiser can't sell");
         require(ownerOf(ticketId) != buyer, "The buyer already owns the ticket");
         require(buyer != _festivalOrganiser, "The organiser cannot buy");
         address previousOwner = ownerOf(ticketId);
         transferFrom(ownerOf(ticketId), buyer, ticketId);
+        // the remainder is just to track the ticket through the different users an provide an accurate history in the frontend
         ticketsHistory[ticketId].purchasedAt = ticketsHistory[ticketId].sellingAt;
         ticketsHistory[ticketId].forSale = false;
         ticketsOwnedByAddress[buyer].push(ticketId);
@@ -140,9 +173,9 @@ contract FestivalTicket is Context, AccessControl, ERC721{
         }
         ticketBuyers.push(buyer);
     }
-    /*Allows a ticket owner, different from the organiser, to set a ticket on sale. 
-    The selling price cannot be higher than 210% of the previous price and the organiser cannot sell here. 
-    If all the requirement are met, the customer is approved and can transfer the NFT*/
+    /// @notice let customers set their tickets on sale
+    /// @param newPrice new price on the secondary market
+    /// @param operator needs to be approved so that the ticket can be transferred when it is bought
     function setTicketOnSale(uint256 ticketId, uint256 newPrice, address operator) public{
         require(newPrice < ticketsHistory[ticketId].purchasedAt*210/100, "Selling price is to high");
         require(ownerOf(ticketId) == msg.sender, "Account cannot put ticket on sale");
@@ -162,45 +195,57 @@ contract FestivalTicket is Context, AccessControl, ERC721{
             ticketsOnSecondaryMarket.push(ticketId);
         approve(operator, ticketId);
     }
-    //Getters used in the dapp
+    /// @notice get festival organiser
+    /// @return address of the festival organiser
     function getOrganiser() public view returns(address){
         return _festivalOrganiser;
     }
-
+    /// @notice get selling price on primary market
+    /// @return selling price
     function getInitSellingPrice() public view returns(uint256){
         return _initTicketPrice;
     }
-    
+    /// @notice get price on secondary market
+    /// @param ticketId id of the ticket
+    /// @return selling price on secondary market
     function getSecondaryMarketSellingPrice(uint256 ticketId) isOnSale(ticketId) public view returns(uint256){
         return ticketsHistory[ticketId].sellingAt;
     }
-    
+    /// @notice get the info related to a particular ticket
+    /// @param ticketId id of the ticket
+    /// @return price of purchase, selling price (if any), if ticket on sale
     function getTicketInfo(uint256 ticketId) public view returns(uint256, uint256, bool){
         return(ticketsHistory[ticketId].purchasedAt, 
                ticketsHistory[ticketId].sellingAt,
                ticketsHistory[ticketId].forSale);
     }
-    
+    /// @notice get the minting status
+    /// @return true if tickets have been minted
     function getMintStatus() public view returns (bool){
         return _minted;
     }
-    
+    /// @notice get the tickets on sale on the secondary market
+    /// @return ticketsOnSecondaryMarket
     function getTicketsOnSecondaryMarket() public view returns(uint256[] memory){
         return ticketsOnSecondaryMarket;
     }
-    
+    /// @notice get the tickets owned by one address
+    /// @return list of tickets owned by the address
     function getTicketsOwnedByAddress(address buyer) public view returns(uint256[] memory){
         return ticketsOwnedByAddress[buyer];
     }
-    
+    /// @notice get the tickets that are controlled by the organiser
+    /// @return list of tickets controlled by the organiser
     function getTicketsOwnedByOrganiser() public view returns(uint256[] memory){
         return ticketsOwnedByOrganiser;
     }
-    
+    /// @notice get the list of customers who bought
+    /// @return list of buyers
     function getTicketsBuyers() public view returns(address[] memory){
         return ticketBuyers;
     }
-    
+    /// @notice check if support interface 
+    /// @return true if supports
     function supportsInterface(bytes4 interfaceId) public view virtual override(ERC721, AccessControl) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
