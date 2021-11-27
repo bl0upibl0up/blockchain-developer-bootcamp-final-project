@@ -49,8 +49,8 @@ Here are the different steps to run the app.
 - `yarn build:copy` this will copy the abi to the dapp folder
 - `yarn start` this makes the app available in a web browser at the address [`http://localhost:3000`](http://localhost:3000).
 
-** When reloading the page, the contracts are lost, the button `Fetch festival`reloads the smart contracts **
-** When switching accounts in Metamask, the contracts are lost as well. Again, the button `Fetch festival`reloads the smart contracts **
+**When reloading the page, the contracts are lost, the button `Fetch festival`reloads the smart contracts**
+**When switching accounts in Metamask, the contracts are lost as well. Again, the button `Fetch festival`reloads the smart contracts**
 
 6. To run the test, in a terminal, type: `ganache-cli -p 7545` then, in a second terminal, type: `truffle test test/festivalMarketPlace.js` from the root directory of the project
 
