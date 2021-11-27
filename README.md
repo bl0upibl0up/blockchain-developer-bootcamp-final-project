@@ -38,16 +38,20 @@ Here are the different steps to run the app.
 
 3. Make sure to get some ETH from a rinkeby faucet to deploy your smart contracts [Faucet](https://faucets.chain.link/rinkeby).
 
-2. In a terminal, from the the root directory, run:  
+4. In a terminal, from the the root directory, run:  
 
 - `yarn`
 - `truffle migrate --rinkeby` this will compile the smart contracts and deploy them on the rinkeby testnet.
 
-3. In a terminal, from the dapp directory, run:
+5. In a terminal, from the dapp directory, run:
 
 - `yarn`
 - `yarn build:copy` this will copy the abi to the dapp folder
 - `yarn start` this makes the app available in a web browser at the address [`http://localhost:3000`](http://localhost:3000).
 
-4. To run the test, in the terminal, type: `truffle test test/festivalMarketPlace.js`
+** When reloading the page, the contracts are lost, the button `Fetch festival`reloads the smart contracts **
+** When switching accounts in Metamask, the contracts are lost as well. Again, the button `Fetch festival`reloads the smart contracts **
+
+6. To run the test, in the terminal, type: `truffle test test/festivalMarketPlace.js`
+
 
