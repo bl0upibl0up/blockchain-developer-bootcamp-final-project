@@ -1,6 +1,6 @@
 # Festival Tickets Marketplace
 
-This application implements a festival ticketing system running on a blockchain. It allows an organiser create festivals and sell the tickets, represented as NFTs, on the app. It also features a marketplace to allow people sell the tickets they bought. The ticket price cannot be higher than 110% of the previous price and the organiser can choose to receive a commission (up to 10%) on these transactions.
+This application implements a festival ticketing system running on a blockchain. It allows an organiser to create festivals and sell the tickets, represented as NFTs, on the app. It also features a marketplace to allow people sell the tickets they bought. The ticket price cannot be higher than 110% of the previous price and the organiser can choose to receive a commission (up to 10%) on these transactions.
 
 ## Smart Contracts
 
@@ -15,28 +15,13 @@ In the current implementation, only the `FestivalMarketPlace`and the `FestivalMa
 
 ## How To Use 
 
-We developed a web interface to demonstrate the different functionalities of the decentralized application. You will need [Docker](https://www.docker.com/get-started) and Docker Compose as well as [Metamask](https://metamask.io/) to test the app. The application has been tested on Mac OS, Ubuntu and Windows 10.
+We developed a web interface to demonstrate the different functionalities of the decentralized application. You will need [Metamask](https://metamask.io/) to test the app. The application has been tested on Mac OS.
 
 Here are the different steps to run the app. 
 
 1. Download or clone this repository.
 
-2. In a terminal, from the the root directory `festivalTickets`, run:  
-`docker-compose up --build`  
-This creates a local blockchain on your computer using `ganache-cli` and deploys the smart contracts on this blockchain with `truffle`. As explained in the previous section, only the `FestivalMarketToken`and the `FestivalMarketPlace`contracts are deployed at first. Instances of the other contracts are created everytime you create a new festival on the market place. If everything worked as intended, you should see lines similar to those of the following image in your terminal: 
-![](images/ganache_docker.png)
-
-### Metamask configuration 
-
-1. In Metamask, if you are already logged on your own account, you can either lock it and import the accounts created by `ganache-cli` using the mnemonic or write down the first four or five private addresses shown in the terminal. If you choose to import using the mnemonic, make sure that you know the one of your own account to restore it afterwards. 
-<img src="images/import_account.png" width="400"/> 
-
-Importing with the mnemonic should automatically import all the accounts created by `ganache-cli`. To easily use the app in the following steps, rename the account corresponding to the first account you see in the terminal as the `Organiser` and subsequent accounts as `Customer 1`, `Customer 2`, etc... In the provided example, the `Organiser` account has the public address `0x966469e62f32E034Dd7b2028D7Ab56A77F732bb2`. This is an important step as the `Organiser`account is the only one that can create festivals. To rename an account, click on the three dots next to its name, click on account details, click on the pen next to its name and write the new name in the box. 
-
-2. To connect Metamask to the local blockchain, click on the network drop down list at the top of Metamask, between the fox and the account logo and then, click on `Custom RPC` and fill the different elements as shown in the following picture (127.0.0.1 instead of 0.0.0.0 on Windows): 
-<img src="images/rpc.png" width="400"/>
-
-Metamask should be able to connect to your local blockchain. 
+2. In a terminal, from the the root directory, run:  
 
 ### Running The Decentralized App
 
