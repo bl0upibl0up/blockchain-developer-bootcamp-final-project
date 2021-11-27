@@ -78,7 +78,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -121,7 +122,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -134,7 +136,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -195,7 +198,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -208,7 +212,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -221,7 +226,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -7525,9 +7531,23 @@
     "name": "solc",
     "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x90D34Ef582FE2E2827c6051Bc82A382A127CE255",
+      "transactionHash": "0x68c6b71bca130e705f53a1c4133522f4d3f8094c3b89c1f47db1074385b03066"
+    },
+    "1637961590477": {
+      "events": {},
+      "links": {},
+      "address": "0x97484E039bf7099e3404EaBA13622Cf41409A85C",
+      "transactionHash": "0x6852b9f12b582e3d01f1b7411fc237cd97fede825e19f89246a30c594794cf43"
+    }
+  },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-11-27T01:16:18.809Z",
+  "updatedAt": "2021-11-27T01:54:23.112Z",
+  "networkType": "ethereum",
   "devdoc": {
     "author": "Ambroise Moreau",
     "kind": "dev",

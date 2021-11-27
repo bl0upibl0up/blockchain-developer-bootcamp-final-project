@@ -23,7 +23,7 @@ module.exports = {
       confirmations: 0,
       timeoutBlocks: 100000,
       skipDryRun: true,
-      from: "0x08429eB7AcB6EaeA59127422DCb1c74A62C7Ee38",
+      //from: "0x08429eB7AcB6EaeA59127422DCb1c74A62C7Ee38",
     },
   },
 
