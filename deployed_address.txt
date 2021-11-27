@@ -1,0 +1,4 @@
+Smart contracts deployed on Rinkeby at these addresses: 
+
+- FestivalMarketToken: 0x90d34ef582fe2e2827c6051bc82a382a127ce255 
+- FestivalMarketPlace: 0x0aB39F3cE3d9EcC6274a435ea40128a083183552
