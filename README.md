@@ -88,6 +88,16 @@ You can see the transaction on [`https://rinkeby.etherscan.io/`](https://rinkeby
 
 6. Click on `Get FMT`. This is an ERC-20 faucet that gives you 100 FMT to test the smart contracts. 
 
-7. Under `Buy from the organiser`, select the festival in the menu and click on `Find tickets`. If the tickets have been minted an alert tells you so. Select the id of the ticket you want to buy. You have to approve two transactions. The first one is to allow the `TransactionsLogic` smart contract to transfer the FMT token and the next one is to confirm the purchase. Again, the logs at the bottom shows that a transaction is pending. After a while, it should show that it has succeeded. 
+7. Under `Buy from the organiser`, select the festival in the menu and click on `Find tickets`. If the tickets have been minted an alert tells you so. Select the id of the ticket you want to buy and click on `Buy ticket`. You have to approve two transactions. The first one is to allow the `TransactionsLogic` smart contract to transfer the FMT token and the next one is to confirm the purchase. Again, the logs at the bottom shows that a transaction is pending. After a while, it should show that it has succeeded.
+
+8. Under `Sell on the secondary market`, select the festival in the menu and click on `Find tickets`. This checks if the account connected in Metamask owns some tickets. You can select the id of the ticket you want to sell and set the price. If you set a price higher than 2.1x the previous price, the smart contract rejects the transaction.
+
+9. Change the account again in Metamask and click on `Fetch festivals`. Make sure that you have test ETH on the account to pay for the gas. 
+
+10. Click on `Get FMT`. The faucet gives you 100 FMT again. 
+
+11. Under `Buy on the secondary market`, select the festival in the menu and click on `Find tickets`. This checks if tickets are available on the secondary market. You can select the id of the ticket you want to buy for this festival. Again, you have to approve two transactions. Check the logs to see your transaction on etherscan.
+
+12. You can get the addresses of the customers who bought tickets either from the organiser or on the secondary market. The address appears in the log. 
 
 
