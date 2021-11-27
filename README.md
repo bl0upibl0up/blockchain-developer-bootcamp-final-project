@@ -1,6 +1,6 @@
 # Festival Tickets Marketplace
 
-This application implements a festival ticketing system running on a blockchain. It allows an organiser to create festivals and sell the tickets, represented as NFTs, on the app. It also features a marketplace to allow people sell the tickets they bought. The ticket price cannot be higher than 110% of the previous price and the organiser can choose to receive a commission (up to 10%) on these transactions.
+This application implements a festival ticketing system running on a blockchain. It allows an organiser to create festivals and sell the tickets, represented as NFTs, on the app. It also features a marketplace to allow people sell the tickets they bought. The ticket price cannot be higher than 110% of the previous price and the organiser can choose to receive a commission (up to 10%) on these transactions. An application is available online at this address to test the smart contracts: [`https://festivalmarketplace.on.fleek.co/`](https://festivalmarketplace.on.fleek.co/).
 
 ## Smart Contracts
 
@@ -23,17 +23,17 @@ Here are the different steps to run the app.
 
 2. In a terminal, from the the root directory, run:  
 
-### Running The Decentralized App
+- `yarn`
 
-1. In a different terminal, from the directory `dapp`, run:  
-`docker-compose up --build`  
+3. In a terminal, from the dapp directory, run:
 
-This makes the app available in a web browser at the address: [`http://0.0.0.0:8080`](http://0.0.0.0:8080) (or [`http://127.0.0.1:8080`](http://127.0.0.1:8080) on windows).
+- `yarn`
+- `yarn start`
 
-2. In your browser, go to [`http://0.0.0.0:8080`](http://0.0.0.0:8080). Metamask should pop up to tell you that the website wants to connect to your account.
-<img src="images/metamask_connection.png" width="800"/>
+This makes the app available in a web browser at the address [`http://localhost:3000`](http://localhost:3000).
 
-3. If everything succeeded, you should see the following website: 
+
+4. If everything succeeded, you should see the following website: 
 <img src="images/festival.png" width="800"/>
 
 In case you are trying to import the `Organiser`account after this step in Metamask without using the mnemonic but rather using the private key, you might need to reconnect to the `ganache-cli` RPC and then, make sure that the account is connected to the website. It should have a balance of 99,xx ETH.  
