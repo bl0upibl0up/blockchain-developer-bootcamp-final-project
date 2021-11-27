@@ -26,7 +26,7 @@ The application uses four different smart contracts that inherits from the openz
 
 In the current implementation, only the `FestivalMarketPlace`and the `FestivalMarketToken`are unique. It means that there can only be one festival organiser and that the ERC-20 transactions are all linked to the deployed `FestivalMarketToken`.  
 
-## How To Use 
+## How To Install  
 
 We developed a web interface to demonstrate the different functionalities of the decentralized application. You will need [Metamask](https://metamask.io/) to test the app. The application has been tested on Mac OS.
 
@@ -34,7 +34,7 @@ Here are the different steps to run the app.
 
 1. Download or clone this repository.
 
-2. Create a `.env`file containing `RINKEBY_MNEMONIC` & `RINKEBY_INFURA_PROJECT_ID`. They will be used to migrate the smart contracts.
+2. Create a `.env` file containing `RINKEBY_MNEMONIC` & `RINKEBY_INFURA_PROJECT_ID`. They will be used to migrate the smart contracts.
 
 3. Make sure to get some ETH from a rinkeby faucet to deploy your smart contracts [Faucet](https://faucets.chain.link/rinkeby).
 
@@ -52,6 +52,10 @@ Here are the different steps to run the app.
 **When reloading the page, the contracts are lost, the button `Fetch festival`reloads the smart contracts**
 **When switching accounts in Metamask, the contracts are lost as well. Again, the button `Fetch festival`reloads the smart contracts**
 
-6. To run the test, in a terminal, type: `ganache-cli -p 7545` then, in a second terminal, type: `truffle test test/festivalMarketPlace.js` from the root directory of the project
+## How to Run The Tests 
+
+To run the test, in a terminal, type: `ganache-cli -p 7545` then, in a second terminal, type: `truffle test test/festivalMarketPlace.js` from the root directory of the project
+
+## Application Flow
 
 
