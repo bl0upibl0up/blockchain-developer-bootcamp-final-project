@@ -60,6 +60,12 @@ To run the test, in a terminal, type: `ganache-cli -p 7545` then, in a second te
 
 Assuming that you have deployed the smart contracts with an account that you control, you will be allowed to create new festivals. You also have to import this account in metamask.
 
-1. When browsing the first time to [`http://localhost:3000`](http://localhost:3000), Metamask opens and asks to connect your account to the website. Make sure to select the Rinkeby network. If you don't see your address in the top-right corner, just click on the connect button. 
+1. When browsing the first time to [`http://localhost:3000`](http://localhost:3000), Metamask opens and asks to connect your account to the website. Make sure to select the Rinkeby network. If you do not see your address in the top-right corner, just click on the connect button. 
 
 <img src="images/festival.png" width="800"/>
+
+2. Click on the `Fetch festivals` button. This is important because it fetches the smart contracts from the blockchain and make sure that you can interact with them in the following steps. If you reload the page or change the account in metamask, you need to click on this button again. At the bottom of the page, you can see if festivals are already deployed on the blockchain. 
+
+<img src="images/sclog.png" width="400"/>
+
+3. Fill the festival details for the festival you want to create (eg: ConsensysFestival, CF, 1, 1). Do not enter random characters for the ticket price and the commission, use only numbers. Entering a commission higher than 10 will cause an error because the commission cannot be higher than 10% and the festival will not be created. Click on `Create festival`. Metamask opens and ask to sign the transaction. 
