@@ -23,13 +23,17 @@ Here are the different steps to run the app.
 
 1. Download or clone this repository.
 
+2. create a `.env`file containing `RINKEBY_MNEMONIC` & `RINKEBY_INFURA_PROJECT_ID`. They will be used to migrate the smart contracts.
+
 2. In a terminal, from the the root directory, run:  
 
 - `yarn`
+- `truffle migrate --rinkeby` this will compile the
 
 3. In a terminal, from the dapp directory, run:
 
 - `yarn`
+- `yarn build:copy`
 - `yarn start`
 
 This makes the app available in a web browser at the address [`http://localhost:3000`](http://localhost:3000).
