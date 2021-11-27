@@ -64,6 +64,7 @@ Assuming that you have deployed the smart contracts with an account that you con
 
 <p align="center">
 <img src="images/festival.png" width="800"/>
+</p>
 
 2. Click on the `Fetch festivals` button. This is important because it fetches the smart contracts from the blockchain and make sure that you can interact with them in the following steps. If you reload the page or change the account in metamask, you need to click on this button again. At the bottom of the page, you can see if festivals are already deployed on the blockchain. 
 
@@ -71,18 +72,22 @@ Assuming that you have deployed the smart contracts with an account that you con
 <img src="images/sclog.png" width="400"/>
 </p>
 
-3. Fill the festival details for the festival you want to create (eg: ConsensysFestival, CF, 1, 1). Do not enter random characters for the ticket price and the commission, use only numbers. Entering a commission higher than 10 will cause an error because the commission cannot be higher than 10% and the festival will not be created. Click on `Create festival`. Metamask opens and ask to sign the transaction. The logs at the bottom shows you that the transaction is pending. This means your festival is being created. 
-
+3. Fill the festival details for the festival you want to create (eg: ConsensysFestival, CF, 1, 1). Do not enter random characters for the ticket price and the commission, use only numbers. Entering a commission higher than 10 will cause an error because the commission cannot be higher than 10% and the festival will not be created. Click on `Create festival`. Metamask opens and ask you to sign the transaction. The logs at the bottom shows you that the transaction is pending. This means your festival is being created. 
 <p align="center">
 <img src="images/txpending.png" width="400"/>
 </p>
-
 After a short time, the log changes and says that the festival is created.
-
 <p align="center">
 <img src="images/festivalCreated.png" width="400"/>
 </p>
-
 You can see the transaction on [`https://rinkeby.etherscan.io/`](https://rinkeby.etherscan.io/). Just right click on `here` and open in a new tab. 
+
+4. Click on `Mint tickets` to mint the tickets for the festival. It opens Metamask again and ask you to sign the transaction. This mints 5 tickets at once. You can do this operation one time only. If you click again when the transaction has succeeded, it alerts you that tickets have already been minted.
+
+5. Change the account in Metamask and click on `Fetch festivals` again. Make sure that you have test ETH on the account to pay for the gas.
+
+6. Click on `Get FMT`. This is an ERC-20 faucet that gives you 100 FMT to test the smart contracts. 
+
+7. Under `Buy from the organiser`, select the festival in the menu and click on `Find tickets`. If the tickets have been minted an alert tells you so. Select the id of the ticket you want to buy. You have to approve two transactions. The first one is to allow the `TransactionsLogic` smart contract to transfer the FMT token and the next one is to confirm the purchase. Again, the logs at the bottom shows that a transaction is pending. After a while, it should show that it has succeeded. 
 
 
