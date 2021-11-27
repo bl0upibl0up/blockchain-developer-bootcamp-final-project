@@ -100,4 +100,6 @@ You can see the transaction on [`https://rinkeby.etherscan.io/`](https://rinkeby
 
 12. You can get the addresses of the customers who bought tickets either from the organiser or on the secondary market. The address appears in the log. 
 
+If you test the application available online, you will not be allowed to create festivals as you do not control the account that deployed the smart contracts. However, festivals have been created and transactions have been made. You can buy and sell tickets. 
+
 
