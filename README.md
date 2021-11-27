@@ -1,6 +1,6 @@
 # Festival Tickets Marketplace
 
-This application implements a festival ticketing system running on a blockchain. It allows an organiser to create festivals and sell the tickets, represented as NFTs, on the app. It also features a marketplace to allow people to sell the tickets they bought. The ticket price cannot be higher than 110% of the previous price and the organiser can choose to receive a commission (up to 10%) on these transactions. An application is available online at this address to test the smart contracts: [`https://festivalmarketplace.on.fleek.co/`](https://festivalmarketplace.on.fleek.co/).
+This application implements a festival ticketing system running on a blockchain. It allows an organiser to create festivals and sell the tickets, represented as NFTs, on the app. It also features a marketplace to allow people to sell the tickets they bought. The ticket price cannot be higher than 110% of the previous price and the organiser can choose to receive a commission (up to 10%) on these transactions. An application is available online at this address to test the smart contracts: [`https://festivalmarketplace.on.fleek.co/`](https://festivalmarketplace.on.fleek.co/). The application works only on the Rinkeby testnet.
 
 ## Prerequisites
 
@@ -36,12 +36,12 @@ Here are the different steps to run the app.
 
 2. Create a `.env` file containing `RINKEBY_MNEMONIC` & `RINKEBY_INFURA_PROJECT_ID`. They will be used to migrate the smart contracts.
 
-3. Make sure to get some ETH from a rinkeby faucet to deploy your smart contracts [Faucet](https://faucets.chain.link/rinkeby).
+3. Make sure to get some ETH from a Rinkeby faucet to deploy your smart contracts [Faucet](https://faucets.chain.link/rinkeby).
 
 4. In a terminal, from the the root directory, run:  
 
 - `yarn`
-- `truffle migrate --rinkeby` this will compile the smart contracts and deploy them on the rinkeby testnet.
+- `truffle migrate --rinkeby` this will compile the smart contracts and deploy them on the Rinkeby testnet.
 
 5. In a terminal, from the dapp directory, run:
 
@@ -58,4 +58,8 @@ To run the test, in a terminal, type: `ganache-cli -p 7545` then, in a second te
 
 ## Application Flow
 
+Assuming that you have deployed the smart contracts with an account that you control, you will be allowed to create new festivals. You also have to import this account in metamask.
 
+1. When browsing the first time to [`http://localhost:3000`](http://localhost:3000), Metamask opens and asks to connect your account to the website. Make sure to select the Rinkeby network. If you don't see your address in the top-right corner, just click on the connect button. 
+
+<img src="images/festival.png" width="800"/>
