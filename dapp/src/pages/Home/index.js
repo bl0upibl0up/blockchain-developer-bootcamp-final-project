@@ -250,7 +250,7 @@
                     txLogicAddress = festivalDetails[i][2];
                 }
             }
-            await marketPlaceToken.methods.approve(txLogicAddress, ticketPrice).send({from:accounts[0]});
+            await marketPlaceToken.methods.increaseAllowance(txLogicAddress, ticketPrice).send({from:accounts[0]});
             tx = await transactionsLogic[selectedFestival].methods.purchaseOnFirstMarket(ticketId).send({from:accounts[0]});
             var txHash = tx['transactionHash'];                                                  
                 scLog.innerHTML = ' ';
@@ -359,7 +359,7 @@
                     txLogicAddress = festivalDetails[i][2];
                 }
             }
-            await marketPlaceToken.methods.approve(txLogicAddress, ticketPrice).send({from:accounts[0]});
+            await marketPlaceToken.methods.increaseAllowance(txLogicAddress, ticketPrice).send({from:accounts[0]});
             tx = await transactionsLogic[selectedFestival].methods.purchaseOnSecondaryMarket(ticketId).send({from:accounts[0]});
             var txHash = tx['transactionHash'];                                                  
             scLog.innerHTML = `Ticket bought on the secondary market - you can check the status of your transaction <a href= https://rinkeby.etherscan.io/tx/${txHash} > here </a>`; 
