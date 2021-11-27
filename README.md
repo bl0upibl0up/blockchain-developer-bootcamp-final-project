@@ -68,4 +68,14 @@ Assuming that you have deployed the smart contracts with an account that you con
 
 <img src="images/sclog.png" width="400"/>
 
-3. Fill the festival details for the festival you want to create (eg: ConsensysFestival, CF, 1, 1). Do not enter random characters for the ticket price and the commission, use only numbers. Entering a commission higher than 10 will cause an error because the commission cannot be higher than 10% and the festival will not be created. Click on `Create festival`. Metamask opens and ask to sign the transaction. 
+3. Fill the festival details for the festival you want to create (eg: ConsensysFestival, CF, 1, 1). Do not enter random characters for the ticket price and the commission, use only numbers. Entering a commission higher than 10 will cause an error because the commission cannot be higher than 10% and the festival will not be created. Click on `Create festival`. Metamask opens and ask to sign the transaction. The logs at the bottom shows you that the transaction is pending. This means your festival is being created. 
+
+<img src="images/txpending.png" width="400"/>
+
+After a short time, the log changes and says that the festival is created.
+
+<img src="images/festivalCreated.png" width="400"/>
+
+You can see the transaction on [`https://rinkeby.etherscan.io/`](https://rinkeby.etherscan.io/). Just right click on `here` and open in a new tab. 
+
+
