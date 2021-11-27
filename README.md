@@ -45,8 +45,7 @@ Here are the different steps to run the app.
 
 - `yarn`
 - `yarn build:copy` this will copy the abi to the dapp folder
-- `yarn start` 
+- `yarn start` this makes the app available in a web browser at the address [`http://localhost:3000`](http://localhost:3000).
 
-This makes the app available in a web browser at the address [`http://localhost:3000`](http://localhost:3000).
-
+4. To run the test, in the terminal, type: `truffle test test/festivalMarketPlace.js`
 
