@@ -49,8 +49,8 @@ contract("FestivalMarketPlace", accounts => {
         var ticketsAddress = await txLogicInstance.getTicketAddress();
         festivalTicketInstance = await FestivalTicket.at(ticketsAddress);
         await festivalTicketInstance.batchMint(10, txLogicAddress);
-        //var balance = await festivalTicketInstance.balanceOf(txLogicAddress);
-        //assert(balance == 10);
+        var balance = await festivalTicketInstance.balanceOf(txLogicAddress);
+        assert(balance == 10);
     })
 
     it('customer should be able to buy from the owner', async () => {
