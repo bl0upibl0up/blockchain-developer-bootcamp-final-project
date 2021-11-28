@@ -7532,27 +7532,15 @@
     "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
   },
   "networks": {
-    "4": {
+    "1337": {
       "events": {},
       "links": {},
-      "address": "0x90D34Ef582FE2E2827c6051Bc82A382A127CE255",
-      "transactionHash": "0x68c6b71bca130e705f53a1c4133522f4d3f8094c3b89c1f47db1074385b03066"
-    },
-    "1637961590477": {
-      "events": {},
-      "links": {},
-      "address": "0x97484E039bf7099e3404EaBA13622Cf41409A85C",
-      "transactionHash": "0x6852b9f12b582e3d01f1b7411fc237cd97fede825e19f89246a30c594794cf43"
-    },
-    "1638049624194": {
-      "events": {},
-      "links": {},
-      "address": "0xA89bBf112b146cF86b7f26A9c0B1BA16E35F7a64",
-      "transactionHash": "0x5b4926acebe6f69bd99b4db19831d77e4adf925e4ca9bb8df6fb95fc21c8d903"
+      "address": "0x2392130876C91E6Cc0FA8Aa47f00eEa11f0Cbf15",
+      "transactionHash": "0x60bca99b6fa13f2ce4e138a3878b177f99aa86ec2844f1643e26f146314db305"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-11-27T01:54:23.112Z",
+  "updatedAt": "2021-11-28T22:32:03.645Z",
   "networkType": "ethereum",
   "devdoc": {
     "author": "Ambroise Moreau",

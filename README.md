@@ -103,8 +103,31 @@ You can see the transaction on [https://rinkeby.etherscan.io/](https://rinkeby.e
 
 If you test the application available online, you will not be allowed to create festivals as you do not control the account that deployed the smart contracts. However, festivals have been created and transactions have been made. You can buy and sell tickets. 
 
+### Testing the Application on a Local Blockchain 
 
-### Ethereum Address for the NFT
+You can also test the dapp on a local blockchain (i.e ganache-cli). However, there is an additional step as the migration is done to a wrong chainId. Here are the steps: 
+
+1. Launch ganache-cli: `ganache-cli -p 7545`;
+2. Deploy the smart contracts: `truffle migrate --network development`;
+4. Go to the smart contract's abi in `build/contracts` and look for the word `networks` in `FestivalMarketPlace.json` and `FestivalMarketToken.json`;
+5. Change the long number highlighted in the following image and set it to `1337`;
+
+<p align="center">
+<img src="images/festivalCreated.png" width="400"/>
+</p>
+
+7. From the dapp folder, run `yarn build:copy` to copy the corrected abi in the src folder;
+6. Configure the network in Metamask. 
+
+This is enough to test the app on a local blockchain.
+
+### Video Walkthrough 
+
+https://www.loom.com/share/89fa818b8dc84811ac29aab8568d7794
+
+
+
+### Ethereum Address for the NFT Certification
 
 `0x4e42C567ACAeC2E576Ef0A0D205521e3e1A7198B`
 

@@ -68,6 +68,7 @@
     var transactionsLogic =  {};
 
     const { active, account, chainId } = useWeb3React();
+    console.log(active, account, chainId);
 
         const onFetchFestivals = async () => {
             try{
