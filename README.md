@@ -41,7 +41,7 @@ Here are the different steps to run the app.
 4. In a terminal, from the the root directory, run:  
 
 - `yarn`
-- `truffle migrate --rinkeby` this will compile the smart contracts and deploy them on the Rinkeby testnet.
+- `truffle migrate --network rinkeby` this will compile the smart contracts and deploy them on the Rinkeby testnet.
 
 5. In a terminal, from the dapp directory, run:
 
@@ -80,7 +80,8 @@ After a short time, the log changes and says that the festival is created.
 <p align="center">
 <img src="images/festivalCreated.png" width="400"/>
 </p>
-You can see the transaction on [`https://rinkeby.etherscan.io/`](https://rinkeby.etherscan.io/). Just right click on `here` and open in a new tab. 
+
+You can see the transaction on [https://rinkeby.etherscan.io/](https://rinkeby.etherscan.io/). Just right click on `here` and open in a new tab. 
 
 4. Click on `Mint tickets` to mint the tickets for the festival. It opens Metamask again and ask you to sign the transaction. This mints 5 tickets at once. You can do this operation one time only. If you click again when the transaction has succeeded, it alerts you that tickets have already been minted.
 
