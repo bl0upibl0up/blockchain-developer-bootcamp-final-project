@@ -5,7 +5,7 @@ This application implements a festival ticketing system running on a blockchain.
 ## Prerequisites
 
 - Node.js >= 16.4
-- Truffle and Ganache: `npm i -g truffle` & `npm i -g ganache-cli``
+- Truffle and Ganache: `npm i -g truffle` & `npm i -g ganache-cli`
 - Yarn
 
 ## Directories
@@ -102,4 +102,8 @@ You can see the transaction on [`https://rinkeby.etherscan.io/`](https://rinkeby
 
 If you test the application available online, you will not be allowed to create festivals as you do not control the account that deployed the smart contracts. However, festivals have been created and transactions have been made. You can buy and sell tickets. 
 
+
+### Ethereum Address for the NFT
+
+`0x4e42C567ACAeC2E576Ef0A0D205521e3e1A7198B`
 
