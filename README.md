@@ -103,7 +103,7 @@ You can see the transaction on [https://rinkeby.etherscan.io/](https://rinkeby.e
 
 If you test the application available online, you will not be allowed to create festivals as you do not control the account that deployed the smart contracts. However, festivals have been created and transactions have been made. You can buy and sell tickets. 
 
-### Testing the Application on a Local Blockchain 
+## Testing the Application on a Local Blockchain 
 
 You can also test the dapp on a local blockchain (i.e ganache-cli). However, there is an additional step as the migration is done to a wrong chainId. Here are the steps: 
 
@@ -121,13 +121,11 @@ You can also test the dapp on a local blockchain (i.e ganache-cli). However, the
 
 This is enough to test the app on a local blockchain.
 
-### Video Walkthrough 
+## Video Walkthrough 
 
 https://www.loom.com/share/89fa818b8dc84811ac29aab8568d7794
 
-
-
-### Ethereum Address for the NFT Certification
+## Ethereum Address for the NFT Certification
 
 `0x4e42C567ACAeC2E576Ef0A0D205521e3e1A7198B`
 
