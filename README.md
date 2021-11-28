@@ -113,7 +113,7 @@ You can also test the dapp on a local blockchain (i.e ganache-cli). However, the
 5. Change the long number highlighted in the following image and set it to `1337`;
 
 <p align="center">
-<img src="images/festivalCreated.png" width="400"/>
+<img src="images/chainId.png" width="400"/>
 </p>
 
 7. From the dapp folder, run `yarn build:copy` to copy the corrected abi in the src folder;
