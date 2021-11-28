@@ -129,3 +129,9 @@ https://www.loom.com/share/89fa818b8dc84811ac29aab8568d7794
 
 `0x4e42C567ACAeC2E576Ef0A0D205521e3e1A7198B`
 
+## Troubleshooting 
+
+Always make sure that the `networks` field in `FestivalMarketPlace.json` and `FestivalMarketToken.json` is not empty. If it is, just do `truffle migrate --network rinkeby --reset`.
+
+Always fetch by clicking on the button `Fetch festivals` when you do not get any response from the ui. 
+
